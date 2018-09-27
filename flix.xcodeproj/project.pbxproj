@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0ABCDA0D02EE8F0121F87DAA /* Pods_flixTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7251A49F49456F3377D3AFD7 /* Pods_flixTests.framework */; };
 		54B2D0BF9C2172D132EBBE74 /* Pods_flix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10D3108CF80ABDA808253E32 /* Pods_flix.framework */; };
+		5B03E05B215D6E4F00F6BFA2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B03E05A215D6E4F00F6BFA2 /* DetailViewController.swift */; };
 		5B9D2BC52155C26900B1A0C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9D2BC42155C26900B1A0C0 /* AppDelegate.swift */; };
 		5B9D2BCA2155C26900B1A0C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B9D2BC82155C26900B1A0C0 /* Main.storyboard */; };
 		5B9D2BCC2155C26A00B1A0C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B9D2BCB2155C26A00B1A0C0 /* Assets.xcassets */; };
@@ -42,6 +43,7 @@
 		28322FFF3F76D3779B6E3E7A /* Pods-flixTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flixTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-flixTests/Pods-flixTests.debug.xcconfig"; sourceTree = "<group>"; };
 		32AC956A8949776DA5853833 /* Pods-flixUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flixUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-flixUITests/Pods-flixUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		392CB881ECE476D83DF8BDC6 /* Pods-flixUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flixUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-flixUITests/Pods-flixUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5B03E05A215D6E4F00F6BFA2 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		5B9D2BC12155C26900B1A0C0 /* flix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = flix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B9D2BC42155C26900B1A0C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B9D2BC92155C26900B1A0C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -91,6 +93,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B03E058215D6DF700F6BFA2 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5B9EBF292155DDD400015590 /* NowPlayingViewController.swift */,
+				5B03E05A215D6E4F00F6BFA2 /* DetailViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		5B03E059215D6E0500F6BFA2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5B9EBF2B215708B300015590 /* MovieCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		5B9D2BB82155C26900B1A0C0 = {
 			isa = PBXGroup;
 			children = (
@@ -116,12 +135,12 @@
 		5B9D2BC32155C26900B1A0C0 /* flix */ = {
 			isa = PBXGroup;
 			children = (
-				5B9EBF292155DDD400015590 /* NowPlayingViewController.swift */,
+				5B03E059215D6E0500F6BFA2 /* Views */,
+				5B03E058215D6DF700F6BFA2 /* View Controllers */,
 				5B9D2BC42155C26900B1A0C0 /* AppDelegate.swift */,
 				5B9D2BC82155C26900B1A0C0 /* Main.storyboard */,
 				5B9D2BCB2155C26A00B1A0C0 /* Assets.xcassets */,
 				5B9D2BCD2155C26A00B1A0C0 /* LaunchScreen.storyboard */,
-				5B9EBF2B215708B300015590 /* MovieCell.swift */,
 				5B9D2BD02155C26A00B1A0C0 /* Info.plist */,
 			);
 			path = flix;
@@ -383,6 +402,7 @@
 				5B9EBF2A2155DDD400015590 /* NowPlayingViewController.swift in Sources */,
 				5B9D2BC52155C26900B1A0C0 /* AppDelegate.swift in Sources */,
 				5B9EBF2C215708B300015590 /* MovieCell.swift in Sources */,
+				5B03E05B215D6E4F00F6BFA2 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
