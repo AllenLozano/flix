@@ -20,13 +20,13 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
     
     override func viewDidLoad() {
        
+        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom:22, right: 40)
         super.viewDidLoad()
         self.tableView.rowHeight = 200
         
         refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(NowPlayingViewController.didPullToRefresh(_:)), for: .valueChanged)
         tableView.insertSubview(refreshControl, at: 0)
-        
         
         tableView.dataSource = self
         fetchMovies()
@@ -95,9 +95,14 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
             let movie =  movies[indexPath.row]
             let detailViewController = segue.destination as! DetailViewController
             detailViewController.movie = movie
+            
         }
-        
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if let index = self.tableView.indexPathForSelectedRow{
+            self.tableView.deselectRow(at: index, animated: true)
+        }
     }
     
     override func didReceiveMemoryWarning() {

@@ -40,9 +40,7 @@ class DetailViewController: UIViewController {
             PosterImageView.af_setImage(withURL: posterpathURL)
             
             
-            
-            
-        }
+            }
 
         // Do any additional setup after loading the view.
     }
