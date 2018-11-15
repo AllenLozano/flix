@@ -25,7 +25,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4Zj-Gz-j7U">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" red="1" green="0.14121977690000001" blue="0.1664252997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="172" id="Yuc-gT-P5t" customClass="MovieCell" customModule="flix" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="172"/>
@@ -229,30 +229,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ibC-wK-BBG">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ibC-wK-BBG">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="e3c-Ys-4C6">
-                                    <size key="itemSize" width="125" height="191"/>
+                                    <size key="itemSize" width="185" height="191"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PosterCell" id="M7X-JR-QMz" customClass="PosterCell" customModule="flix" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="125" height="191"/>
+                                        <rect key="frame" x="95" y="0.0" width="185" height="191"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="125" height="191"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="185" height="191"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5DZ-dO-AcW">
-                                                    <rect key="frame" x="0.0" y="0.0" width="125" height="191"/>
-                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5DZ-dO-AcW">
+                                                    <rect key="frame" x="0.0" y="0.0" width="185" height="191"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="185" id="51i-H1-b0K"/>
+                                                        <constraint firstAttribute="height" constant="191" id="wub-oB-hs8"/>
+                                                    </constraints>
                                                 </imageView>
                                             </subviews>
                                         </view>
+                                        <constraints>
+                                            <constraint firstItem="5DZ-dO-AcW" firstAttribute="top" secondItem="M7X-JR-QMz" secondAttribute="top" id="afJ-6z-5u7"/>
+                                            <constraint firstAttribute="bottom" secondItem="5DZ-dO-AcW" secondAttribute="bottom" id="hVx-Gg-hXc"/>
+                                            <constraint firstItem="5DZ-dO-AcW" firstAttribute="leading" secondItem="M7X-JR-QMz" secondAttribute="leading" id="kmi-gW-e0Y"/>
+                                            <constraint firstAttribute="trailing" secondItem="5DZ-dO-AcW" secondAttribute="trailing" id="qcs-x1-okW"/>
+                                        </constraints>
                                         <connections>
                                             <outlet property="posterImageView" destination="5DZ-dO-AcW" id="A3S-NO-93m"/>
                                         </connections>
@@ -261,6 +269,12 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ibC-wK-BBG" firstAttribute="leading" secondItem="ltt-Rx-A0J" secondAttribute="leading" id="C3c-tK-bR8"/>
+                            <constraint firstAttribute="trailing" secondItem="ibC-wK-BBG" secondAttribute="trailing" id="QYB-gy-M54"/>
+                            <constraint firstAttribute="bottom" secondItem="ibC-wK-BBG" secondAttribute="bottom" id="Xoz-5Q-LRy"/>
+                            <constraint firstItem="ibC-wK-BBG" firstAttribute="top" secondItem="ltt-Rx-A0J" secondAttribute="top" id="arQ-Ej-12c"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="mne-at-wDM"/>
                     <connections>
